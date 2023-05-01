@@ -1,3 +1,7 @@
+:root {
+  --font: 'Poppins', sans-serif;
+}
+
 body {
   height: 100vh;
 }
