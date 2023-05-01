@@ -15,7 +15,22 @@ body {
 .leftSide {
   background-image: url(./images/background-image.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 700px;
+  background-size: cover;
+  width: 650px;
   height: 100vh;
+  position: relative;
+}
+
+.title {
+  width: 650px;
+  height: 150px;  
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-content: center;
+  color: white;
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 35px;
+  position: absolute;
+  margin-top: 200px;
 }
