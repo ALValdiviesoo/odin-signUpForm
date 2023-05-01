@@ -11,3 +11,11 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+.leftSide {
+  background-image: url(./images/background-image.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 700px;
+  height: 100vh;
+}
