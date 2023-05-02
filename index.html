@@ -39,41 +39,47 @@
         </div>
 
         <div class="myForm">
-          <form action="" method="post">
+          <form method="get">
             <div class="row">
               <div class="input">
-                <label for="firstName">FIRST NAME</label>
-                <input type="text" name="firstName" id="firstName">
+                <label for="firstName"><span aria-required="true" class="required">*</span> FIRST NAME</label>
+                <input type="text" name="firstName" id="firstName" required pattern="^[A-Z][a-zA-Z]+" placeholder="e.g. John">
               </div>
 
               <div class="input">
-                <label for="lastName">LAST NAME</label>
-                <input type="text" name="lastName" id="lastName">
+                <label for="lastName"><span aria-required="true" class="required">*</span> LAST NAME</label>
+                <input type="text" name="lastName" id="lastName" required pattern="^[A-Z][a-zA-Z]+" placeholder="e.g. Cena">
               </div>
             </div>
 
             <div class="row">
               <div class="input">
-                <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email">
+                <label for="email"><span aria-required="true" class="required">*</span> EMAIL</label>
+                <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="e.g. youremail@something.com">
               </div>
 
               <div class="input">
-                <label for="number">PHONE NUMBER</label>
-                <input type="tel" name="number" id="number">
+                <label for="number"><span aria-required="true" class="required">*</span> PHONE NUMBER</label>
+                <input type="tel" name="number" id="number" required minlength="11" maxlength="11" pattern="[0-9]+" placeholder="e.g. 09696271389">
               </div>
             </div>
 
             <div class="row">
               <div class="input">
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password">
+                <label for="password"><span aria-required="true" class="required">*</span> PASSWORD</label>
+                <input type="password" name="password" id="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" minlength="8" onkeyup="check();">
               </div>
 
               <div class="input">
-                <label for="confirm">CONFIRM PASSWORD</label>
-                <input type="password" name="confirm" id="confirm">
+                <label for="confirm"><span aria-required="true" class="required">*</span> CONFIRM PASSWORD</label>
+                <input type="password" name="confirm" id="confirm" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" minlength="8" onkeyup="check();">
               </div>
+            </div>
+
+            <div class="row--last">
+              <button type="submit" id="submit">SUBMIT</button>
+
+              <span id="message"></span>
             </div>
           </form>
         </div>
@@ -85,5 +91,6 @@
     </div>
   </div>
 
+  <script src="./index.js"></script>
 </body>
 </html>
