@@ -19,10 +19,11 @@ body {
   width: 650px;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .title {
-  width: 650px;
+  width: 100%;
   height: 150px;  
   background-color: rgba(0, 0, 0, 0.5);
   display: grid;
@@ -33,4 +34,31 @@ body {
   font-size: 35px;
   position: absolute;
   margin-top: 200px;
+}
+
+.container {
+  display: flex;
+}
+
+.rightSide {
+  width: 100%;
+}
+
+.topSection {
+  width: 100%;
+  height: 350px;
+  font-family: var(--font);
+  font-weight: bold;
+}
+
+.texts {
+  margin-left: 20px;
+  width: 65%;
+  margin-bottom: 0px;
+  margin-top: 160px;
+  font-size: 23px;
+}
+
+.texts:first-of-type p {
+  margin-bottom: 15px;
 }
